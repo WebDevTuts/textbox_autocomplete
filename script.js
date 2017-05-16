@@ -23,3 +23,54 @@ targetInput.addEventListener('keydown', function(event) {
     event.preventDefault();
   }
 });
+
+// Add event listener for the input keyup
+targetInput.addEventListener('keyup', function(event) {
+  /*
+  * Key codes
+  *
+  * Enter: 13
+  * Arrow up: 38
+  * Arrow down: 40
+  */
+
+  results.innerHTML = '';
+  toggleResults('hide');
+
+  if (this.value.length > 0) {
+    matches = getMatches(this.value);
+
+    if (matches.length > 0) {
+      displayMatches(matches);
+    }
+  }
+
+  if (results.classList.contains('visible')) {
+    switch(event.keyCode) {
+      case 13:
+        targetInput.value = results.children[resultsCursor].innerHTML;
+        toggleResults('hide');
+        resultsCursor = 0;
+
+        break;
+
+      case 38:
+        if  (resultCursor > 0) {
+          resultsCursor--;
+
+          moveCursor(resultsCursor);
+        }
+
+        break;
+
+      case 40:
+        if (resultsCursor < (matches.length -1)) {
+          resultsCursor++;
+
+          moveCursor(resultsCursor);
+        }
+
+        break;
+    }
+  }
+});
