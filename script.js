@@ -87,3 +87,19 @@ function getMatches(inputText) {
 
   return matchList;
 }
+
+// Define a function for displaying autocomplete results
+function displayMatches(matchList) {
+  var j = 0;
+
+  while (j < matchList.length) {
+    results.innerHTML += '<li class="result">' + matchList[j] + '</li>';
+    j++;
+  }
+
+  // The first child gets a class of "highlighted"
+  moveCursor(resultsCursor);
+
+  // Show the results
+  toggleResults('show');
+}
