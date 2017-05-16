@@ -112,3 +112,12 @@ function moveCursor(pos) {
 
   results.children[pos].classList.add('highlighted');
 }
+
+// Define a function for toggling the results list
+function toggleResults(action) {
+  if (action == 'show') {
+    results.classList.add('visible');
+  } else if (action == 'hide') {
+    results.classList.remove('visible');
+  }
+}
