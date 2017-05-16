@@ -74,3 +74,16 @@ targetInput.addEventListener('keyup', function(event) {
     }
   }
 });
+
+// Define a function for checking if the input value matches any of the country names
+function getMatches(inputText) {
+  var matchList = [];
+
+  for (var i = 0; i < countryList.length; i++) {
+    if (countryList[i].toLowerCase().indexOf(inputText.toLowerCase()) != -1) {
+      matchList.push(countryList[i]);
+    }
+  }
+
+  return matchList;
+}
