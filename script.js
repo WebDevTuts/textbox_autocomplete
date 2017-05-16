@@ -13,3 +13,6 @@ var targetInput = document.getElementById('country'),
     countryList = ['Albania', 'Colombia', 'Cuba', 'El Salvador', 'Jordan', 'Kenya', 'Nepal', 'Romania', 'Sri Lanka', 'Wales'],
     matches = [],
     resultsCursor = 0;
+
+// Focus the input
+targetInput.focus();
