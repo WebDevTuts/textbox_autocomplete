@@ -103,3 +103,12 @@ function displayMatches(matchList) {
   // Show the results
   toggleResults('show');
 }
+
+// Define a function for moving the cursor in the results list
+function moveCursor(pos) {
+  for (var x = 0; x < results.children.length; x++) {
+    results.children[x].classList.remove('highlighted');
+  }
+
+  results.children[pos].classList.add('highlighted');
+}
