@@ -16,3 +16,10 @@ var targetInput = document.getElementById('country'),
 
 // Focus the input
 targetInput.focus();
+
+// Add event listener for the input keydown
+targetInput.addEventListener('keydown', function(event) {
+  if (event.keyCode == '13') {
+    event.preventDefault();
+  }
+});
