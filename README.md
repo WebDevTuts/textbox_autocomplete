@@ -2,6 +2,6 @@
 
 In this tutorial, we learn how to use JavaScript to code an auto complete textbox that list a list of countries that match the inputs keyed in.
 
-[View your demo site here.](https://github.com/WebDevTuts/textbox_autocomplete)
+[View your demo site here.](https://webdevtuts.github.io/textbox_autocomplete)
 
 ![Preview](screenshot.png)
